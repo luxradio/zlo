@@ -21,7 +21,7 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        background: #111;
+        background: url(https://img.xatblog.net/image/r1j9aQOvz.jpg) center no-repeat;
         -webkit-perspective: 1000px;
         perspective: 1000px;
         -webkit-transform-style: preserve-3d;
@@ -164,7 +164,9 @@
         
 
         <!-- Text at center of ground -->
-        <p>𝓓𝓔𝓢𝓘𝓖𝓝𝓔𝓡 𝓑𝓨 »♠𝕰𝖝𝖙𝖗𝖆𝕷𝖚𝖝♠« LUX1 (1800018).</p>
+               <p><marquee behavior="scroll" direction="left" scrollamount="4" scrolldelay="20" width="408" "="" style="width:"408px"=""> 
+<font size="5" font color="ff0000">♥<font color="aaa9ad">´¨•.¸¸.♫..𝑫𝒐𝒃𝒓𝒐 𝒅𝒐𝒔𝒍𝒊 𝒏𝒂 𝒎𝒐𝒋 𝒑𝒓𝒐𝒇𝒊𝒍´¨•.¸¸.♫..♥..(<font color="ff0000">♥‿♥<font color="aaa9ad">)</marquee>
+<font size="5" font color="aaa9ad"> 𝓓𝓔𝓢𝓘𝓖𝓝𝓔𝓡 𝓑𝓨 »♠𝕰𝖝𝖙𝖗𝖆𝕷𝖚𝖝♠« 𝕷𝖀𝖃𝟏(𝟏𝟖𝟎𝟎𝟎𝟏𝟖).</p>
       </div>
       <div id="ground" style="width: 480px; height: 480px;"></div>
     </div>
@@ -188,10 +190,21 @@
 <div style="position: absolute;  
 vertical-align: top;  
 text-align: left; 
-bottom: -200px;  
-right: 10px;">
+bottom: -257px;  
+right: -25px;">
 <iframe id="Frame1" src="https://extralux.org/vox/big/vox.html?ip=?send=" align="middle" scrolling="no" frameborder="0" style="width:513px;  height:590px; border: 0px;"></iframe>
 </div>
+      </div>
+<div style="position: absolute;  
+vertical-align: top;
+text-align: left;
+bottom: -0px;  
+right: 495px;">
+                <font size="4" font color="aaa9ad"><p>Copyright  <a href="https://xat.me/LUX1" target="_blank"><font size="4" font color="aaa9ad">© by ExtraLux</a></p> <!--edit here-->
+            </div>
+        </div>
+    </div>
+</div> 
     <script>
       // Author: ExtrLux (https://www.facebook.com/groups/610131509121086)
       // Github verson (1 file .html): https://github.com/HoangTran0410/3DCarousel/blob/master/index.html
@@ -336,45 +349,54 @@ right: 10px;">
       };
     </script>
   
-</script>
-</body>
-</div></div></div>
-<script language="JavaScript">
-window.onload = function() {
-document.addEventListener("contextmenu", function(e){
-e.preventDefault();
-}, false);
-document.addEventListener("keydown", function(e) {
-//document.onkeydown = function(e) {
-// "I" key
-if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-disabledEvent(e);
-}
-// "J" key
-if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-disabledEvent(e);
-}
-// "S" key + macOS
-if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-disabledEvent(e);
-}
-// "U" key
-if (e.ctrlKey && e.keyCode == 85) {
-disabledEvent(e);
-}
-// "F12" key
-if (event.keyCode == 123) {
-disabledEvent(e);
-}
-}, false);
-function disabledEvent(e){
-if (e.stopPropagation){
-e.stopPropagation();
-} else if (window.event){
-window.event.cancelBubble = true;
-}
-e.preventDefault();
-return false;
-}
-};
-</script>
+  <script>
+
+
+		var message="Isključeno kopiranje i desni klik!";
+
+		function clickIE4(){
+		if (event.button==2){
+		alert(message);
+		return false;
+		}
+		}
+
+		function clickNS4(e){
+		if (document.layers||document.getElementById&&!document.all){
+		if (e.which==2||e.which==3){
+		alert(message);
+		return false;
+		}
+		}
+		}
+
+		if (document.layers){
+		document.captureEvents(Event.MOUSEDOWN);
+		document.onmousedown=clickNS4;
+		}
+		else if (document.all&&!document.getElementById){
+		document.onmousedown=clickIE4;
+		}
+
+		document.oncontextmenu=new Function("alert(message);return false")
+</script>	
+
+
+
+
+
+<script>
+
+
+		function disableselect(e){
+		return false
+		}
+		function reEnable(){
+		return true
+		}
+		document.onselectstart=new Function ("return false")
+		if (window.sidebar){
+		document.onmousedown=disableselect
+		document.onclick=reEnable
+		}
+</script>  
